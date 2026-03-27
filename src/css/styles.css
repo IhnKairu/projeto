@@ -10,7 +10,8 @@ html, body {
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto Slab', 'Roboto Mono', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  font-weight: 400;
   line-height: 1.5;
   color: #ffffff;
   background-image: url("../images/bg.JPG");
@@ -56,10 +57,18 @@ main, section {
 
 h1, h2, h3, h4, h5 {
   margin-top: 1.1em;
+  font-family: inherit;
+  font-weight: 700;
 }
 
 h1 {
   font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+  text-align: center;
+  font-weight: 900;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 h2 { font-size: clamp(1.4rem, 3vw, 2rem); }
@@ -101,6 +110,10 @@ ul {
 
 .hidden {
   display: none !important;
+}
+
+header {
+  text-align: center;
 }
 
 header nav {

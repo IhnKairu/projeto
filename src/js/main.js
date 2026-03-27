@@ -1,26 +1,78 @@
 // Language switching
 const langButtons = document.querySelectorAll('.language-switcher button');
 const locales = document.querySelectorAll('.locale');
+const navLinks = document.querySelectorAll('nav a[data-i18n]');
+
+const navTranslations = {
+    pt: {
+        habilidades: 'Habilidades',
+        programacao: 'Linguagens',
+        perfil: 'Perfil',
+        sobre: 'Sobre',
+        menu: 'Navegação principal',
+        openMenu: 'Abrir menu',
+    },
+    en: {
+        habilidades: 'Skills',
+        programacao: 'Languages',
+        perfil: 'Profile',
+        sobre: 'About',
+        menu: 'Main navigation',
+        openMenu: 'Open menu',
+    }
+};
+
+const navTargets = {
+    pt: {
+        habilidades: '#habilidades-pt',
+        programacao: '#programacao-pt',
+        perfil: '#perfil-pt',
+        sobre: '#sobre-pt',
+    },
+    en: {
+        habilidades: '#habilidades-en',
+        programacao: '#programacao-en',
+        perfil: '#perfil-en',
+        sobre: '#sobre-en',
+    }
+};
+
+function setLanguage(lang) {
+    langButtons.forEach(btn => btn.classList.toggle('active', btn.getAttribute('data-lang') === lang));
+
+    locales.forEach(locale => {
+        locale.classList.toggle('hidden', !locale.classList.contains(`locale-${lang}`));
+    });
+
+    navLinks.forEach(link => {
+        const key = link.dataset.i18n;
+        link.textContent = navTranslations[lang][key] || link.textContent;
+        link.setAttribute('href', navTargets[lang][key] || link.getAttribute('href'));
+        // Troca o idioma do menu de navegação
+        if (lang === 'en') {
+            link.parentElement.style.display = navTargets.en[key] ? '' : 'none';
+        } else {
+            link.parentElement.style.display = navTargets.pt[key] ? '' : 'none';
+        }
+    });
+
+    const navElement = document.querySelector('nav');
+    navElement.setAttribute('aria-label', navTranslations[lang].menu);
+    document.querySelector('.hamburger').setAttribute('aria-label', navTranslations[lang].openMenu);
+    document.documentElement.lang = lang === 'pt' ? 'pt-BR' : 'en';
+
+    localStorage.setItem('selectedLanguage', lang);
+}
 
 langButtons.forEach(button => {
     button.addEventListener('click', () => {
         const lang = button.getAttribute('data-lang');
-        langButtons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
-        locales.forEach(locale => {
-            if (locale.classList.contains(`locale-${lang}`)) {
-                locale.classList.remove('hidden');
-            } else {
-                locale.classList.add('hidden');
-            }
-        });
-        localStorage.setItem('selectedLanguage', lang);
+        setLanguage(lang);
     });
 });
 
-// Load saved language
 const savedLang = localStorage.getItem('selectedLanguage') || 'pt';
-document.querySelector(`[data-lang="${savedLang}"]`).click();
+setLanguage(savedLang);
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('nav a[href^="#"]').forEach(anchor => {
