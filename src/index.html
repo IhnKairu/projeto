@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfólio de Fernanda Rasi Madi</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Portfólio de Fernanda Rasi Madi</h1>
+    <nav aria-label="Navegação principal">
+      <ul>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#programacao">Linguagens</a></li>
+        <li><a href="#perfil">Perfil</a></li>
+        <li><a href="#sobre">Sobre</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="language-switcher">
+      <button type="button" data-lang="pt" class="active">PT</button>
+      <button type="button" data-lang="en">EN</button>
+    </div>
+
+    <div class="locale locale-pt">
+      <section id="habilidades">
+        <h2>Habilidades</h2>
+
+        <h3>Experiência profissional</h3>
+        <p>Psicóloga e estudante de Ciência da Computação.</p>
+
+        <div class="link-button">
+          <a class="btn" href="https://exemplo.com/psicologia" target="_blank" rel="noopener noreferrer">Experiência em Psicologia</a>
+        </div>
+
+        <div class="link-button">
+          <a class="btn" href="https://exemplo.com/computacao" target="_blank" rel="noopener noreferrer">Conhecimentos em Ciência da Computação</a>
+        </div>
+      </section>
+
+      <section id="programacao">
+        <h3>Linguagens de programação</h3>
+        <ul>
+          <li><a class="btn" href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank" rel="noopener noreferrer">HTML</a></li>
+          <li><a class="btn" href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank" rel="noopener noreferrer">CSS</a></li>
+          <li><a class="btn" href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer">JavaScript</a></li>
+          <li><a class="btn" href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank" rel="noopener noreferrer">C</a></li>
+          <li><a class="btn" href="https://www.python.org/" target="_blank" rel="noopener noreferrer">Python</a></li>
+        </ul>
+      </section>
+
+      <section id="perfil">
+        <h4>Perfil e contato</h4>
+        <img src="images/1764048263547.jpeg" alt="Foto de Fernanda Rasi Madi" width="200" height="200" />
+        <p>Sou uma desenvolvedora iniciante que está aprendendo HTML, CSS e JavaScript. Estou desenvolvendo este website para praticar minhas habilidades.</p>
+
+        <div class="link-button">
+          <a class="btn" href="https://linkedin.com/in/fernanda-rasi-madi-24b1331aa/" target="_blank" rel="noopener noreferrer">Ir para o LinkedIn</a>
+        </div>
+      </section>
+
+      <section id="sobre">
+        <h5>Sobre mim</h5>
+        <p>Tenho 35 anos, sou psicóloga e me especializando em desenvolvimento web. Meu objetivo é criar sites funcionais e atraentes com boas práticas de programação. Estou no meu primeiro ano de Ciência da Computação e pretendo atuar na área de cibersegurança.</p>
+      </section>
+    </div>
+
+    <div class="locale locale-en hidden">
+      <section>
+        <h2>Skills</h2>
+
+        <h3>Professional Experience</h3>
+        <p>Psychologist and Computer Science student.</p>
+
+        <div class="link-button">
+          <a class="btn" href="https://exemplo.com/psychology" target="_blank" rel="noopener noreferrer">Psychology experience</a>
+        </div>
+
+        <div class="link-button">
+          <a class="btn" href="https://exemplo.com/computer-science" target="_blank" rel="noopener noreferrer">Computer Science knowledge</a>
+        </div>
+      </section>
+
+      <section>
+        <h3>Programming Languages</h3>
+        <ul>
+          <li><a class="btn" href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener noreferrer">HTML</a></li>
+          <li><a class="btn" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank" rel="noopener noreferrer">CSS</a></li>
+          <li><a class="btn" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer">JavaScript</a></li>
+          <li><a class="btn" href="https://en.wikipedia.org/wiki/C_(programming_language)" target="_blank" rel="noopener noreferrer">C</a></li>
+          <li><a class="btn" href="https://www.python.org/" target="_blank" rel="noopener noreferrer">Python</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h4>Profile and Contact</h4>
+        <img src="" alt="Photo of Fernanda Rasi Madi (add image path)" width="200" height="200" />
+        <p>I am a junior developer learning HTML, CSS and JavaScript. I am developing this website to practice my skills.</p>
+
+        <div class="link-button">
+          <a class="btn" href="https://linkedin.com/in/fernanda-rasi-madi-24b1331aa/" target="_blank" rel="noopener noreferrer">Go to LinkedIn</a>
+        </div>
+      </section>
+
+      <section>
+        <h5>About me</h5>
+        <p>I am 35 years old, a psychologist specializing in web development. My goal is to create functional and attractive websites based on good programming practices. I am in my first year of Computer Science and I intend to work in cybersecurity.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 Fernanda Rasi Madi - Todos os direitos reservados</p>
+    <p>
+      <a href="mailto:seu-email@exemplo.com">seu-email@exemplo.com</a> | <a href="https://linkedin.com/in/fernanda-rasi-madi-24b1331aa/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+    </p>
+    <button id="theme-toggle" type="button" aria-label="Alternar tema claro/escuro">Dark Mode</button>
+  </footer>
+
+  <script defer src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "name": "portfolio-feranda-rasi-madi",
+  "version": "1.0.0",
+  "description": "Portfólio pessoal com suporte a temas, idioma e navegação mobile.",
+  "main": "src/index.html",
+  "scripts": {
+    "lint:html": "htmlhint src/index.html",
+    "lint:css": "stylelint \"src/css/**/*.css\"",
+    "lint": "npm run lint:html && npm run lint:css"
+  },
+  "devDependencies": {
+    "htmlhint": "^1.4.5",
+    "stylelint": "^15.13.0",
+    "stylelint-config-standard": "^30.0.0"
+  }
+}
