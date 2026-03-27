@@ -111,19 +111,15 @@ header nav {
   position: relative;
 }
 
-header nav .nav-menu {
+header nav ul {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
-}
-
-header nav ul {
-  display: flex;
   gap: 0.8rem;
   list-style: none;
   padding: 0;
   margin: 0;
+  width: 100%;
 }
 
 header nav ul li a {
@@ -142,8 +138,9 @@ header nav ul li a {
   cursor: pointer;
 }
 
-header nav.open .nav-menu {
-  display: block;
+header nav.open ul {
+  display: flex;
+  flex-direction: column;
   position: absolute;
   top: 100%;
   left: 0;
@@ -152,18 +149,12 @@ header nav.open .nav-menu {
   padding: 0.8rem 0;
 }
 
-header nav.open ul {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
 header nav.open ul li {
   padding: 0.3rem 1rem;
 }
 
 @media (max-width: 768px) {
-  header nav .nav-menu {
+  header nav ul {
     display: none;
   }
 
